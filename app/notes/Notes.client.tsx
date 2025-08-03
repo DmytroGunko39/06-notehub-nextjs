@@ -1,11 +1,11 @@
 'use client';
 
 import css from '@/app/Home.module.css';
-import NoteList from '@/compontnts/NoteList/NoteList';
-import Pagination from '@/compontnts/Pagination/Pagination';
-import SearchBox from '@/compontnts/SearchBox/SearchBox';
-import NoteModal from '@/compontnts/NoteModal/NoteModal';
-import NoteForm from '@/compontnts/NoteForm/NoteForm';
+import NoteList from '@/components/NoteList/NoteList';
+import Pagination from '@/components/Pagination/Pagination';
+import SearchBox from '@/components/SearchBox/SearchBox';
+import NoteModal from '@/components/NoteModal/NoteModal';
+import NoteForm from '@/components/NoteForm/NoteForm';
 import { useState } from 'react';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { fetchNotes } from '@/lib/api';

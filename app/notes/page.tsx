@@ -1,4 +1,4 @@
-import NoteList from '@/compontnts/NoteList/NoteList';
+import NoteList from '@/components/NoteList/NoteList';
 // import NotesClient from './Notes.client';
 import { fetchNotes } from '@/lib/api';
 
