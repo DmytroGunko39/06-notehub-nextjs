@@ -8,7 +8,7 @@ export interface FetchNotesResponse {
   perPage: number;
 }
 
-const myKey = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
+const myKey = process.env.NOTEHUB_TOKEN;
 
 axios.defaults.baseURL = 'https://notehub-public.goit.study/api';
 
