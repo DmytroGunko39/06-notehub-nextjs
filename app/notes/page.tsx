@@ -1,13 +1,11 @@
-import NoteList from '@/components/NoteList/NoteList';
-// import NotesClient from './Notes.client';
+import NotesClient from './Notes.client';
 import { fetchNotes } from '@/lib/api';
 
 const Notes = async () => {
-  const response = await fetchNotes();
+  const initialData = await fetchNotes(1, 12, '');
   return (
     <main>
-      {/* <NotesClient /> */}
-      <NoteList notes={response.notes} />
+      <NotesClient initialData={initialData} />
     </main>
   );
 };
