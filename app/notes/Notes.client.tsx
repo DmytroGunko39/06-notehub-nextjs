@@ -4,7 +4,7 @@ import css from '@/app/page.module.css';
 import NoteList from '@/components/NoteList/NoteList';
 import Pagination from '@/components/Pagination/Pagination';
 import SearchBox from '@/components/SearchBox/SearchBox';
-import Modal from '@/components/NoteModal/NoteModal';
+import Modal from '@/components/Modal/Modal';
 import NoteForm from '@/components/NoteForm/NoteForm';
 import { useState } from 'react';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
