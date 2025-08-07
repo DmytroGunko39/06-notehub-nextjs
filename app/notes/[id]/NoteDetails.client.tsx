@@ -25,6 +25,10 @@ const NoteDetailsClient = () => {
     return <p>Something went wrong.</p>;
   }
 
+  const formattedDate = note.updatedAt
+    ? `Update at:${note.updatedAt}`
+    : `Create at:${note.createdAt}`;
+
   return (
     <div className={css.container}>
       <div className={css.item}>
@@ -32,7 +36,7 @@ const NoteDetailsClient = () => {
           <h2>{note.title}</h2>
         </div>
         <p className={css.content}>{note.content}</p>
-        <p className={css.date}>{note.createdAt}</p>
+        <p className={css.date}>{formattedDate}</p>
       </div>
     </div>
   );

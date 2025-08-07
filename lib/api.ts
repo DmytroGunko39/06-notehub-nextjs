@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { NewNotesData, Note } from '../types/note';
+import type { NewNoteData, Note, DeleteNoteResponse } from '../types/note';
 
 export interface FetchNotesResponse {
   notes: Note[];
@@ -34,7 +34,7 @@ export const fetchNotes = async (
   return response.data;
 };
 
-export const createNote = async (notesData: NewNotesData) => {
+export const createNote = async (notesData: NewNoteData) => {
   const response = await axios.post<Note>('/notes', notesData, {
     headers: {
       Authorization: `Bearer ${myKey}`,
@@ -43,8 +43,10 @@ export const createNote = async (notesData: NewNotesData) => {
   return response.data;
 };
 
-export const deleteNote = async (noteId: number) => {
-  const response = await axios.delete(`/notes/${noteId}`, {
+export const deleteNote = async (
+  noteId: string,
+): Promise<DeleteNoteResponse> => {
+  const response = await axios.delete<DeleteNoteResponse>(`/notes/${noteId}`, {
     headers: {
       Authorization: `Bearer ${myKey}`,
     },
